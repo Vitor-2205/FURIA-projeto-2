@@ -1,0 +1,105 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Fã de Esports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Seu Perfil de Fã de Esports</h1>
+        <p>Conte-nos um pouco sobre sua paixão por esports!</p>
+
+        <form id="esports-profile-form">
+
+            <div class="form-group">
+                <label>Jogos de Esports Favoritos (selecione todos que aplicam):</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="fav_game" value="cs"> Counter-Strike</label>
+                    <label><input type="checkbox" name="fav_game" value="valorant"> Valorant</label>
+                    <label><input type="checkbox" name="fav_game" value="lol"> League of Legends</label>
+                    <label><input type="checkbox" name="fav_game" value="dota2"> Dota 2</label>
+                    <label><input type="checkbox" name="fav_game" value="rl"> Rocket League</label>
+                    <label><input type="checkbox" name="fav_game" value="other"> Outro (especifique abaixo)</label>
+                </div>
+                <input type="text" id="other_game" name="other_game" placeholder="Especifique outro(s) jogo(s) favorito(s)">
+            </div>
+
+            <div class="form-group">
+                <label for="fav_teams">Times de Esports Favoritos (separados por vírgula):</label>
+                <input type="text" id="fav_teams" name="fav_teams" placeholder="ex: FURIA, Team Liquid, G2 Esports">
+            </div>
+
+            <div class="form-group">
+                <label for="fav_players">Jogadores de Esports Favoritos (separados por vírgula):</label>
+                <input type="text" id="fav_players" name="fav_players" placeholder="ex: KSCERATO, s1mple, Faker">
+            </div>
+
+            <div class="form-group">
+                <label>Onde você costuma assistir esports? (selecione todos que aplicam):</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="platform" value="twitch"> Twitch</label>
+                    <label><input type="checkbox" name="platform" value="youtube"> YouTube</label>
+                    <label><input type="checkbox" name="platform" value="kick"> Kick</label>
+                    <label><input type="checkbox" name="platform" value="in_game"> Cliente do Jogo</label>
+                    <label><input type="checkbox" name="platform" value="other_platform"> Outro</label>
+                </div>
+            </div>
+
+             <div class="form-group">
+                <label for="follow_duration">Há quanto tempo você acompanha esports?</label>
+                <select id="follow_duration" name="follow_duration">
+                    <option value="">--Por favor escolha uma opção--</option>
+                    <option value="less_1">Menos de 1 ano</option>
+                    <option value="1_3">1 - 3 anos</option>
+                    <option value="3_5">3 - 5 anos</option>
+                    <option value="5_plus">Mais de 5 anos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="watch_frequency">Com que frequência você assiste esports?</label>
+                <select id="watch_frequency" name="watch_frequency">
+                    <option value="">--Por favor escolha uma opção--</option>
+                    <option value="daily">Quase Diariamente</option>
+                    <option value="weekly">Algumas vezes por semana</option>
+                    <option value="monthly">Algumas vezes por mês</option>
+                    <option value="major_events">Principalmente Grandes Eventos</option>
+                    <option value="rarely">Raramente</option>
+                </select>
+            </div>
+
+             <div class="form-group">
+                <label>Você joga algum título de esports competitivamente (modos ranqueados, ligas, etc.)?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="play_competitively" value="yes"> Sim</label>
+                    <label><input type="radio" name="play_competitively" value="no" checked> Não</label>
+                </div>
+                 <div id="competitive-details" style="display: none; margin-top: 10px;">
+                    <label for="competitive_games">Qual(is) jogo(s) e em que nível (opcional)?</label>
+                    <input type="text" id="competitive_games" name="competitive_games" placeholder="ex: CS:GO - Faceit Nível 8, LoL - Diamante">
+                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="enjoyment_reason">O que você mais gosta nos esports?</label>
+                <textarea id="enjoyment_reason" name="enjoyment_reason" rows="4" placeholder="ex: Gameplay de alto nível, rivalidades entre times, interação da comunidade..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit-button">Enviar Perfil</button>
+            </div>
+
+            <div id="confirmation-message" class="confirmation" style="display: none;">
+                Obrigado! As informações do seu perfil foram registradas (verifique o console).
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

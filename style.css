@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Lighter gray text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top */
+    min-height: 100vh;
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 700px;
+    background-color: #2a2a2a; /* Slightly lighter dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border: 1px solid #444;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+#esports-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Spacing within a form group */
+}
+
+label {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+input[type="text"],
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #00A8E8; /* Highlight color on focus */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Spacing between checkboxes/radios */
+    padding-top: 5px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal; /* Normal weight for options */
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+    accent-color: #00A8E8; /* Style the checkbox/radio itself */
+    width: 16px;
+    height: 16px;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    background-color: #00A8E8; /* Theme color */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Pill shape */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: block; /* Center button */
+    margin: 20px auto 0 auto; /* Add top margin and center */
+    width: fit-content;
+}
+
+button[type="submit"]:hover {
+    background-color: #0086b3; /* Darker shade on hover */
+}
+button[type="submit"]:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+#confirmation-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-left: 5px solid #00A8E8;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    button[type="submit"] {
+        width: 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+}
